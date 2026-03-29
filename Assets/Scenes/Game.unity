@@ -567,7 +567,6 @@ MonoBehaviour:
     Address: 127.0.0.1
     Port: 7777
     ServerListenAddress: 127.0.0.1
-    ClientBindPort: 0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
@@ -600,6 +599,7 @@ GameObject:
   - component: {fileID: 1411948195}
   - component: {fileID: 1411948196}
   - component: {fileID: 1411948197}
+  - component: {fileID: 1411948198}
   m_Layer: 0
   m_Name: VirtualCamera
   m_TagString: Untagged
@@ -793,6 +793,19 @@ MonoBehaviour:
         DecelTime: 0
   PlayerIndex: -1
   AutoEnableInputs: 1
+--- !u!114 &1411948198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411948191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40bf914ede8d674cb20bf0de771d525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  CMC: {fileID: 1411948194}
 --- !u!1 &1776500999
 GameObject:
   m_ObjectHideFlags: 0

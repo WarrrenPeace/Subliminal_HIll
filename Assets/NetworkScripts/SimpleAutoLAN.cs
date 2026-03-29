@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-public class SimpleAutoLAN : MonoBehaviour
+public class SimpleAutoLAN : MonoBehaviour //Pretty sure this is AI but idk how to do this so it will work for now
 {
     [Header("Settings")]
     [SerializeField] private float searchTime = 3f;        // How long to search before becoming host
