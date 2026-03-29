@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.community.netcode.extensions": "file:C:/Users/User/Downloads/multiplayer-community-contributions-main/multiplayer-community-contributions-main/com.community.netcode.extensions",
     "com.unity.ai.navigation": "2.0.8",
     "com.unity.cinemachine": "3.1.2",
     "com.unity.collab-proxy": "2.11.3",
