@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 238072490}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21791777, y: 0, z: 0, w: 0.97596717}
-  m_LocalPosition: {x: 0, y: 1.6340001, z: -4}
+  m_LocalPosition: {x: -0.129, y: 1.69842, z: -3.97853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 1274511735}
   - component: {fileID: 1274511734}
   - component: {fileID: 1274511736}
+  - component: {fileID: 1274511737}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -565,12 +566,27 @@ MonoBehaviour:
   ConnectionData:
     Address: 127.0.0.1
     Port: 7777
-    ServerListenAddress: 127.0.0.1
+    ServerListenAddress: 0.0.0.0
     ClientBindPort: 0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
+--- !u!114 &1274511737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274511733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4e9282d765ebf4199c2a5568a3d28a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleAutoLAN
+  searchTime: 3
+  gamePort: 7777
+  discoveryPort: 8888
 --- !u!1 &1411948191
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,7 +616,7 @@ Transform:
   m_GameObject: {fileID: 1411948191}
   serializedVersion: 2
   m_LocalRotation: {x: 0.21791777, y: 0, z: 0, w: 0.97596717}
-  m_LocalPosition: {x: 0, y: 1.6340001, z: -4}
+  m_LocalPosition: {x: -0.129, y: 1.69842, z: -3.97853}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -870,75 +886,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1805226088
-PrefabInstance:
+--- !u!1 &1952272705
+GameObject:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952272706}
+  - component: {fileID: 1952272707}
+  m_Layer: 0
+  m_Name: FindHost
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952272706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952272705}
   serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8167386537903556573, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: GlobalObjectIdHash
-      value: 94678736
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354696334288953460, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.129
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.93158
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.02147
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8663443520830997286, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2fcd5767ce1b0034a8776659f8a5ea39, type: 3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1952272707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952272705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
+  GlobalObjectIdHash: 2789164529
+  InScenePlacedSourceGlobalObjectIdHash: 0
+  DeferredDespawnTick: 0
+  Ownership: 1
+  AlwaysReplicateAsRoot: 0
+  SynchronizeTransform: 1
+  ActiveSceneSynchronization: 0
+  SceneMigrationSynchronization: 0
+  SpawnWithObservers: 1
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
+  SyncOwnerTransformWhenParented: 1
+  AllowOwnerToParent: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1274511735}
+  - {fileID: 1952272706}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1776501002}
   - {fileID: 238072494}
   - {fileID: 1411948193}
-  - {fileID: 1805226088}
