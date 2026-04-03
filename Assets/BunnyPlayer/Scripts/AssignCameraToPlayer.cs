@@ -3,28 +3,25 @@ using Unity.Netcode;
 using Unity.Cinemachine;
 using System;
 
-public class AssignCameraToPlayer : MonoBehaviour
+public class AssignCameraToPlayer : NetworkBehaviour
 {
     [SerializeField] CinemachineVirtualCameraBase CMC;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CMC = GetComponent<CinemachineCamera>();
-        if (NetworkManager.Singleton.IsClient)
+        CMC = GameObject.FindGameObjectWithTag("VirtualCamera"). GetComponent<CinemachineCamera>();
+        
+        if (IsOwner)
         {
-            NetworkManager.Singleton.OnConnectionEvent += OnClientConnected;
-        }
-        if (NetworkManager.Singleton.IsHost)
-        {
-            NetworkManager.Singleton.OnConnectionEvent += OnClientConnected;
+            AssignCamera();
         }
     }
 
-    private void OnClientConnected(NetworkManager manager, ConnectionEventData data)
+    void AssignCamera()
     {
-        Debug.Log(NetworkManager.Singleton.LocalClient.PlayerObject);
         CMC.Follow = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
         CMC.LookAt = NetworkManager.Singleton.LocalClient.PlayerObject.transform;
+        Destroy(this);
     }
 
 }
