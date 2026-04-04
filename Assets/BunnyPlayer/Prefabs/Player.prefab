@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 8663443520830997286}
   - component: {fileID: 4769837767619148775}
   - component: {fileID: 1206917446801311417}
-  - component: {fileID: 5827916184224863998}
+  - component: {fileID: 8270616060649544627}
   - component: {fileID: 8167386537903556573}
   - component: {fileID: 7963569431223759801}
   - component: {fileID: 6256529922169156678}
@@ -242,8 +242,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!65 &5827916184224863998
-BoxCollider:
+--- !u!135 &8270616060649544627
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -261,8 +261,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.4, z: 0.3}
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0.25, z: 0}
 --- !u!114 &8167386537903556573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1858155079
+  GlobalObjectIdHash: 1411642745
   InScenePlacedSourceGlobalObjectIdHash: 1411642745
   DeferredDespawnTick: 0
   Ownership: 1
@@ -313,7 +313,7 @@ MonoBehaviour:
   ScaleLerpSmoothing: 1
   ScaleMaxInterpolationTime: 0.1
   AuthorityMode: 1
-  TickSyncChildren: 0
+  TickSyncChildren: 1
   UseUnreliableDeltas: 0
   SyncPositionX: 1
   SyncPositionY: 1
