@@ -57,8 +57,9 @@ public class PlayerMovement : NetworkBehaviour
             camRight.y = 0;
             inputDirection = camRight * inputDirection.x + camForward * inputDirection.z;
 
-            Quaternion targetRotation = Quaternion.LookRotation(inputDirection.normalized);
-            model.transform.rotation = Quaternion.RotateTowards(model.transform.rotation, targetRotation, 720 * Time.deltaTime);
+            Rotate();
+            //Quaternion targetRotation = Quaternion.LookRotation(inputDirection.normalized);
+            //model.transform.rotation = Quaternion.RotateTowards(model.transform.rotation, targetRotation, 720 * Time.deltaTime);
         }
 
         
@@ -74,10 +75,19 @@ public class PlayerMovement : NetworkBehaviour
     }
     void FixedUpdate()
     {
-        if(IsOwner) {Move();}
+        if(IsOwner) 
+        {
+            Move();
+        }
     }
     void Move()
     {
         RB.AddForce(inputDirection.normalized * speed);
+    }
+    void Rotate()
+    {
+        Quaternion targetRotation = Quaternion.LookRotation(inputDirection.normalized);
+        //model.transform.rotation = Quaternion.RotateTowards(model.transform.rotation, targetRotation, 720 * Time.deltaTime);
+        RB.MoveRotation(targetRotation);
     }
 }
